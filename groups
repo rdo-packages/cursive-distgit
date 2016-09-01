@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-8ec5727d5938bd8607dd449d86a3b882b88e828f	openstack/cursive-distgit-ptl
+# UUID          Group Name
+False 	Non-Interactive Users
+bd0475d50978ef5484d0981f09c52e958ab4ffcc       	openstack/cursive-distgit-core
+8ec5727d5938bd8607dd449d86a3b882b88e828f        	openstack/cursive-distgit-ptl
+global:Registered-Users		Registered Users
