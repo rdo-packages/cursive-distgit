@@ -44,15 +44,16 @@ added to this project in support of various security features.
 %package -n     python2-%{pypi_name}
 Summary:        Cursive implements OpenStack-specific validation of digital signatures
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:       python-castellan
+Requires:       python-castellan >= 0.4.0
 Requires:       python-cryptography
 Requires:       python-lxml >= 2.3
 Requires:       python-netifaces >= 0.10.4
-Requires:       python-oslo-log
+Requires:       python-oslo-log >= 1.14.0
 Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-utils
+Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-oslo-i18n >= 2.1.0
 Requires:       python-six >= 1.9.0
+Requires:       python-pbr
 
 %description -n python2-%{pypi_name}
 Cursive implements OpenStack-specific validation of digital signatures.
@@ -86,15 +87,16 @@ BuildRequires:  python3-oslo-log
 BuildRequires:  python3-oslo-serialization
 BuildRequires:  python3-oslo-utils
 
-Requires:       python3-castellan
+Requires:       python3-castellan >= 0.4.0
 Requires:       python3-cryptography
 Requires:       python3-lxml >= 2.3
 Requires:       python3-netifaces >= 0.10.4
-Requires:       python3-oslo-log
+Requires:       python3-oslo-log >= 1.14.0
 Requires:       python3-oslo-serialization >= 1.10.0
-Requires:       python3-oslo-utils
+Requires:       python3-oslo-utils >= 3.16.0
 Requires:       python3-oslo-i18n >= 2.1.0
 Requires:       python3-six >= 1.9.0
+Requires:       python3-pbr
 
 %description -n python3-%{pypi_name}
 Cursive implements OpenStack-specific validation of digital signatures.
