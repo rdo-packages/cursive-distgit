@@ -53,7 +53,6 @@ Requires:       python-oslo-serialization >= 1.10.0
 Requires:       python-oslo-utils >= 3.16.0
 Requires:       python-oslo-i18n >= 2.1.0
 Requires:       python-six >= 1.9.0
-Requires:       python-pbr
 
 %description -n python2-%{pypi_name}
 Cursive implements OpenStack-specific validation of digital signatures.
@@ -96,7 +95,6 @@ Requires:       python3-oslo-serialization >= 1.10.0
 Requires:       python3-oslo-utils >= 3.16.0
 Requires:       python3-oslo-i18n >= 2.1.0
 Requires:       python3-six >= 1.9.0
-Requires:       python3-pbr
 
 %description -n python3-%{pypi_name}
 Cursive implements OpenStack-specific validation of digital signatures.
