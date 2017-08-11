@@ -15,7 +15,6 @@ Source0:        https://files.pythonhosted.org/packages/source/c/%{pypi_name}/%{
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
-BuildRequires:  python-coverage >= 3.6
 BuildRequires:  python-hacking
 BuildRequires:  python-oslotest >= 1.10.0
 BuildRequires:  python-pbr >= 1.8
@@ -67,7 +66,6 @@ added to this project in support of various security features.
 Summary:        Cursive implements OpenStack-specific validation of digital signatures
 %{?python_provide:%python_provide python3-%{pypi_name}}
 BuildRequires:  python3-devel
-BuildRequires:  python3-coverage >= 3.6
 BuildRequires:  python3-hacking
 BuildRequires:  python3-oslotest >= 1.10.0
 BuildRequires:  python3-pbr >= 1.8
