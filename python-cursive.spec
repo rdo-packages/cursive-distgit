@@ -5,8 +5,8 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        0.1.2
+Release:        1%{?dist}
 Summary:        OpenStack-specific validation of digital signatures
 
 License:        ASL 2.0
@@ -160,3 +160,6 @@ rm -rf .testrepository
 %doc doc/build/html
 
 %changelog
+* Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 0.1.2-1
+- Update to 0.1.2
+
