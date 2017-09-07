@@ -4,6 +4,13 @@
 %endif
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global common_desc \
+Cursive implements OpenStack-specific validation of digital signatures. \
+\
+The cursive project contains code extracted from various OpenStack \
+projects for verifying digital signatures. Additional capabilities will be \
+added to this project in support of various security features.
+
 Name:           python-%{pypi_name}
 Version:        XXX
 Release:        XXX
@@ -34,11 +41,7 @@ BuildRequires: python-oslo-log
 BuildRequires: python-oslo-serialization
 BuildRequires: python-oslo-utils
 %description
-Cursive implements OpenStack-specific validation of digital signatures.
-
-The cursive project contains code extracted from various OpenStack
-projects for verifying digital signatures. Additional capabilities will be
-added to this project in support of various security features.
+%{common_desc}
 
 %package -n     python2-%{pypi_name}
 Summary:        Cursive implements OpenStack-specific validation of digital signatures
@@ -55,11 +58,7 @@ Requires:       python-six >= 1.9.0
 Requires:       python-pbr
 
 %description -n python2-%{pypi_name}
-Cursive implements OpenStack-specific validation of digital signatures.
-
-The cursive project contains code extracted from various OpenStack
-projects for verifying digital signatures. Additional capabilities will be
-added to this project in support of various security features.
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n     python3-%{pypi_name}
@@ -97,11 +96,7 @@ Requires:       python3-six >= 1.9.0
 Requires:       python3-pbr
 
 %description -n python3-%{pypi_name}
-Cursive implements OpenStack-specific validation of digital signatures.
-
-The cursive project contains code extracted from various OpenStack
-projects for verifying digital signatures. Additional capabilities will be
-added to this project in support of various security features.
+%{common_desc}
 %endif
 
 %package -n python-%{pypi_name}-doc
