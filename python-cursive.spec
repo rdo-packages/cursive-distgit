@@ -153,3 +153,4 @@ rm -rf .testrepository
 %doc doc/build/html
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/cursive/commit/?id=28dd13b94df580ab281730829e1da0141bfb2747
