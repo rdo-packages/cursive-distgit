@@ -21,6 +21,7 @@ URL:            https://github.com/openstack/cursive
 Source0:        https://files.pythonhosted.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
+BuildRequires:  git
 BuildRequires:  python2-devel
 BuildRequires:  python-hacking
 BuildRequires:  python-oslotest >= 1.10.0
@@ -31,7 +32,7 @@ BuildRequires:  python-testrepository >= 0.0.18
 BuildRequires:  python-testscenarios >= 0.4
 BuildRequires:  python-testtools >= 1.4.0
 # Required for documentation
-BuildRequires:  python-oslo-sphinx >= 2.5.0
+BuildRequires:  python-openstackdocstheme
 BuildRequires:  python-reno
 BuildRequires:  python-sphinx
 # Required for tests
@@ -74,7 +75,7 @@ BuildRequires:  python3-testrepository >= 0.0.18
 BuildRequires:  python3-testscenarios >= 0.4
 BuildRequires:  python3-testtools >= 1.4.0
 # Required for documentation
-BuildRequires:  python3-oslo-sphinx >= 2.5.0
+BuildRequires:  python3-openstackdocstheme
 BuildRequires:  python3-reno
 BuildRequires:  python3-sphinx
 # Required for tests
@@ -105,7 +106,7 @@ Summary:        cursive documentation
 Documentation for cursive
 
 %prep
-%autosetup -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
