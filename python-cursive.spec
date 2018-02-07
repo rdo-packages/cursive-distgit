@@ -21,41 +21,43 @@ URL:            https://github.com/openstack/cursive
 Source0:        https://files.pythonhosted.org/packages/source/c/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 BuildArch:      noarch
 
+BuildRequires:  git
 BuildRequires:  python2-devel
-BuildRequires:  python-hacking
-BuildRequires:  python-oslotest >= 1.10.0
-BuildRequires:  python-pbr >= 1.8
-BuildRequires:  python-setuptools
-BuildRequires:  python-subunit >= 0.0.18
-BuildRequires:  python-testrepository >= 0.0.18
-BuildRequires:  python-testscenarios >= 0.4
-BuildRequires:  python-testtools >= 1.4.0
+BuildRequires:  python2-hacking
+BuildRequires:  python2-oslotest >= 1.10.0
+BuildRequires:  python2-pbr >= 1.8
+BuildRequires:  python2-setuptools
+BuildRequires:  python2-subunit >= 0.0.18
+BuildRequires:  python2-testrepository >= 0.0.18
+BuildRequires:  python2-testscenarios >= 0.4
+BuildRequires:  python2-testtools >= 1.4.0
 # Required for documentation
-BuildRequires:  python-oslo-sphinx >= 2.5.0
-BuildRequires:  python-reno
-BuildRequires:  python-sphinx
+BuildRequires:  python2-oslo-sphinx >= 2.5.0
+BuildRequires:  python2-openstackdocstheme
+BuildRequires:  python2-reno
+BuildRequires:  python2-sphinx
 # Required for tests
-BuildRequires: python-castellan
-BuildRequires: python-cryptography
-BuildRequires: python-oslo-log
-BuildRequires: python-oslo-serialization
-BuildRequires: python-oslo-utils
+BuildRequires: python2-castellan
+BuildRequires: python2-cryptography
+BuildRequires: python2-oslo-log
+BuildRequires: python2-oslo-serialization
+BuildRequires: python2-oslo-utils
 %description
 %{common_desc}
 
 %package -n     python2-%{pypi_name}
 Summary:        Cursive implements OpenStack-specific validation of digital signatures
 %{?python_provide:%python_provide python2-%{pypi_name}}
-Requires:       python-castellan >= 0.4.0
-Requires:       python-cryptography
-Requires:       python-lxml >= 2.3
-Requires:       python-netifaces >= 0.10.4
-Requires:       python-oslo-log >= 1.14.0
-Requires:       python-oslo-serialization >= 1.10.0
-Requires:       python-oslo-utils >= 3.16.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-six >= 1.9.0
-Requires:       python-pbr
+Requires:       python2-castellan >= 0.4.0
+Requires:       python2-cryptography
+Requires:       python2-lxml >= 2.3
+Requires:       python2-netifaces >= 0.10.4
+Requires:       python2-oslo-log >= 1.14.0
+Requires:       python2-oslo-serialization >= 1.10.0
+Requires:       python2-oslo-utils >= 3.16.0
+Requires:       python2-oslo-i18n >= 2.1.0
+Requires:       python2-six >= 1.9.0
+Requires:       python2-pbr
 
 %description -n python2-%{pypi_name}
 %{common_desc}
@@ -105,7 +107,7 @@ Summary:        cursive documentation
 Documentation for cursive
 
 %prep
-%autosetup -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 # Remove bundled egg-info
 rm -rf %{pypi_name}.egg-info
 
