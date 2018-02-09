@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7aaa499b_61099031",
+        "filename": "python-cursive.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-02-09T06:49:35Z",
+      "side": 1,
+      "message": "ditto.",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 36
+      },
+      "revId": "80692b35ba52ddef3e740bd312fed38504b1e937",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "7aaa499b_810c9c43",
+        "filename": "python-cursive.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2018-02-09T06:49:35Z",
+      "side": 1,
+      "message": "These are remove upstream master: https://github.com/openstack/cursive/commit/d574d9bfcef7811bfc3ce32ab3a84e820069b32b#diff-b4ef698db8ca845e5845c4618278f29a, can be removed once we have new tag release or now also as i checked in current tag(0.2.1) also these are not used.",
+      "range": {
+        "startLine": 60,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 43
+      },
+      "revId": "80692b35ba52ddef3e740bd312fed38504b1e937",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
