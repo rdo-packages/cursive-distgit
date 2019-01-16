@@ -12,6 +12,8 @@
 %global pypi_name cursive
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
+%global with_doc 1
+
 %global common_desc \
 Cursive implements OpenStack-specific validation of digital signatures. \
 \
@@ -39,11 +41,6 @@ BuildRequires:  python%{pyver}-subunit >= 0.0.18
 BuildRequires:  python%{pyver}-testrepository >= 0.0.18
 BuildRequires:  python%{pyver}-testscenarios >= 0.4
 BuildRequires:  python%{pyver}-testtools >= 1.4.0
-# Required for documentation
-BuildRequires:  python%{pyver}-oslo-sphinx >= 2.5.0
-BuildRequires:  python%{pyver}-openstackdocstheme
-BuildRequires:  python%{pyver}-reno
-BuildRequires:  python%{pyver}-sphinx
 # Required for tests
 BuildRequires: python%{pyver}-castellan
 BuildRequires: python%{pyver}-cryptography
@@ -67,10 +64,17 @@ Requires:       python%{pyver}-pbr
 %description -n python%{pyver}-%{pypi_name}
 %{common_desc}
 
+%if 0%{?with_doc}
 %package -n python-%{pypi_name}-doc
 Summary:        cursive documentation
+# Required for documentation
+BuildRequires:  python%{pyver}-oslo-sphinx >= 2.5.0
+BuildRequires:  python%{pyver}-openstackdocstheme
+BuildRequires:  python%{pyver}-reno
+BuildRequires:  python%{pyver}-sphinx
 %description -n python-%{pypi_name}-doc
 Documentation for cursive
+%endif
 
 %prep
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
@@ -79,10 +83,13 @@ rm -rf %{pypi_name}.egg-info
 
 %build
 %{pyver_build}
+
+%if 0%{?with_doc}
 # generate docs
 %{pyver_bin} setup.py build_sphinx
 # remove the sphinx-build-%{pyver} leftovers
 rm -rf html/.{doctrees,buildinfo}
+%endif
 
 %install
 # Must do the subpackages' install first because the scripts in /usr/bin are
@@ -99,8 +106,10 @@ export PYTHON=%{pyver_bin}
 %{pyver_sitelib}/%{pypi_name}
 %{pyver_sitelib}/%{pypi_name}-*.egg-info
 
+%if 0%{?with_doc}
 %files -n python-%{pypi_name}-doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %changelog
