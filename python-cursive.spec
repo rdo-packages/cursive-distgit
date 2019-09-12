@@ -68,9 +68,7 @@ Requires:       python%{pyver}-pbr
 %package -n python-%{pypi_name}-doc
 Summary:        cursive documentation
 # Required for documentation
-BuildRequires:  python%{pyver}-oslo-sphinx >= 2.5.0
 BuildRequires:  python%{pyver}-openstackdocstheme
-BuildRequires:  python%{pyver}-reno
 BuildRequires:  python%{pyver}-sphinx
 %description -n python-%{pypi_name}-doc
 Documentation for cursive
