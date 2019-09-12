@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "2716982a_41687748",
+        "filename": "python-cursive.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 73,
+      "author": {
+        "id": 643
+      },
+      "writtenOn": "2019-09-12T13:06:21Z",
+      "side": 0,
+      "message": "I think they still need reno in [1]\n\n[1] https://github.com/openstack/cursive/blob/d7cea1f30fb54ceecdd9b5be3e2505a3e3489aca/releasenotes/source/conf.py#L42",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 73,
+        "endChar": 35
+      },
+      "revId": "51c2ee047e9b3457257d2401fdda66a5ed25ce92",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
