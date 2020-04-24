@@ -11,8 +11,8 @@ projects for verifying digital signatures. Additional capabilities will be \
 added to this project in support of various security features.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        0.2.2
+Release:        1%{?dist}
 Summary:        OpenStack-specific validation of digital signatures
 
 License:        ASL 2.0
@@ -100,3 +100,6 @@ python3 setup.py test
 %endif
 
 %changelog
+* Fri Apr 24 2020 RDO <dev@lists.rdoproject.org> 0.2.2-1
+- Update to 0.2.2
+
