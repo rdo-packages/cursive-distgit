@@ -33,6 +33,7 @@ BuildRequires:  python3-testtools >= 1.4.0
 # Required for tests
 BuildRequires: python3-castellan
 BuildRequires: python3-cryptography
+BuildRequires: python3-mock
 BuildRequires: python3-oslo-log
 BuildRequires: python3-oslo-serialization
 BuildRequires: python3-oslo-utils
