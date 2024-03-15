@@ -13,8 +13,8 @@ projects for verifying digital signatures. Additional capabilities will be \
 added to this project in support of various security features.
 
 Name:           python-%{pypi_name}
-Version:        XXX
-Release:        XXX
+Version:        0.2.3
+Release:        2%{?dist}
 Summary:        OpenStack-specific validation of digital signatures
 
 License:        Apache-2.0
@@ -97,3 +97,6 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 %changelog
+* Fri Mar 15 2024 RDO <dev@lists.rdoproject.org> 0.2.3-2
+- Rebuild 0.2.3 in Caracal
+
